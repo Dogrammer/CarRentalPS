@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12 mb-3">
+        <button class="btn btn-primary" (click)="onAdd()">Dodaj Grad</button>
+      </div>
+  </div>
+
+      <h2>Gradovi</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Ime Grada</th>
+            <th>Poštanski Broj</th>
+            <th colspan="2">Akcija</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let city of cities">
+            <td>{{city.name}}</td>
+            <td>{{city.zip}}</td>
+            <td>
+              <button class="btn" (click)="onEdit(city.id)"><i class="fa fa-edit icon-zoom-in" style="font-size:30px;color:gray;"></i></button>
+            </td>
+            <td>
+              <button class="btn" (click)="onDelete(city.id)"><i class="fa fa-trash" style="font-size:30px;color:red;"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

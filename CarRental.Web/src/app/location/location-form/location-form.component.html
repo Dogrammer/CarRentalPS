@@ -1,0 +1,25 @@
+<div>
+
+    <form (submit)="onSubmit()" #gejForm="ngForm">
+       <input title="id" name="id" type="hidden" [(ngModel)]="location.id" />
+        
+        <div class="form-group">
+          <label for="location">Lokacija</label>
+          <input required type="text" name="location" [(ngModel)]="location.name" class="form-control" id="location">
+        </div>
+
+        <div class="form-group">
+          <label for="cityId">Ime Grada</label>
+          <select class="form-control" name="cityId" [(ngModel)]="selectedCityId">
+            <option *ngFor="let city of cities" [value]="city.id">
+              {{city.name}}
+            </option>
+          </select>
+        </div>
+        
+        
+        
+        <button [disabled]="!gejForm.form.valid" type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary ml-5" (click)="cancelForm()">Odustani</button>
+      </form>
+</div> 

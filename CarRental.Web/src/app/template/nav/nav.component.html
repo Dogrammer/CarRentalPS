@@ -1,0 +1,39 @@
+      <div id ="space-nav-body"class="container">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
+                <div class="container">
+                    <img  id="logo" src="../../../assets/logo.jpg" alt="logo">
+                  <!-- <a href="../../home/home-page/home-page.component.html" class="navbar-brand">Car Rental</a> -->
+                  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        
+                      <li class="nav-item">
+                          <a [routerLink]="['/']" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a [routerLink]="['/rentals']" class="nav-link">Najmovi <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a [routerLink]="['/cars']" class="nav-link">Vozila <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a [routerLink]="['/carCategories']" class="nav-link">Kategorije <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a [routerLink]="['/customers']" class="nav-link">Korisnici <span class="sr-only">(current)</span></a>
+                </li>
+                      <li class="nav-item">
+                          <a [routerLink]="['/locations']" class="nav-link">Lokacije <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a [routerLink]="['/cities']" class="nav-link">Gradovi <span class="sr-only">(current)</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+          </div>
+  
+  

@@ -1,0 +1,31 @@
+<div>
+
+  <div [hidden]="errorMessage.length == 0">{{errorMessage}}</div>
+    <form (submit)="onSubmit()" #carForm="ngForm">
+      <div class="form-group">
+        <label for="brand">Marka</label>
+        <input type="text" name="brand" [(ngModel)]="car.brand" class="form-control" id="brand">
+      </div>
+
+      <div class="form-group">
+        <label for="model">Model</label>
+        <input required type="text" name="model" [(ngModel)]="car.model" class="form-control" id="model">
+      </div>
+      
+      <div class="form-group">
+        <label for="year">Godina Proizvodnje</label>
+          <input required name="year" type="number" title="year" [(ngModel)]="car.productionYear" class="form-control" id="year">
+      </div>
+
+      <div class="form-group">
+        <label for="categoryId">Tip Vozila</label>
+        <select class="form-control" name="categoryId" [(ngModel)]="selectedCategoryId">
+          <option *ngFor="let categor of categories" [value]="categor.id">
+            {{categor.name}}
+          </option>
+        </select>
+      </div>
+      <button [disabled]="!carForm.form.valid" type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-secondary ml-5" (click)="cancelForm()">Odustani</button>
+    </form>
+</div> 

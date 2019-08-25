@@ -1,0 +1,276 @@
+.ShowcaseContainer {
+  padding-left: 5px;
+  padding-right: 5px; }
+  .ShowcaseContainer .editButton {
+    border: solid 0.5px rgba(0, 0, 0, .04);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    height: 40px;
+    visibility: hidden;
+    width: 40px; }
+  .ShowcaseContainer .editButton em {
+      background: url(https://s.pinimg.com/webapp/style/images/webapp-common-main-1x-c20ceaff.png) -295px -20px no-repeat;
+      height: 18px;
+      margin-left: 2px;
+      margin-top: 2px;
+      width: 18px; }
+  .ShowcaseContainer .showcaseCarouselWrapper {
+    box-sizing: border-box;
+    padding: 11px;
+    position: relative;
+    width: 790px; }
+  .ShowcaseContainer .showcaseCarouselWrapper::before {
+      background: rgba(0, 0, 0, .05);
+      border-radius: 8px;
+      content: " " !important;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      transform: scale(0.96);
+      width: 100%; }
+  .ShowcaseContainer .showcaseCarouselWrapper:hover::before {
+      animation: tapAnimation 0.25s cubic-bezier(0.31, 1, 0.34, 1) forwards;
+      cursor: pointer; }
+  .ShowcaseContainer .showcaseCarouselWrapper:hover .showcaseButton {
+      visibility: visible; }
+  .ShowcaseContainer .backButton {
+    left: 23px;
+    position: absolute;
+    top: 180px; }
+  .ShowcaseContainer .backButton em {
+      background: url(https://s.pinimg.com/webapp/style/images/webapp-common-main-1x-c20ceaff.png) -258px -154px no-repeat;
+      height: 18px;
+      margin-right: 3px;
+      width: 12px; }
+  .ShowcaseContainer .nextButton {
+    position: absolute;
+    right: 23px;
+    top: 180px; }
+  .ShowcaseContainer .nextButton em {
+      background: url(https://s.pinimg.com/webapp/style/images/webapp-common-main-1x-c20ceaff.png) -276px -244px no-repeat;
+      height: 18px;
+      margin-left: 3px;
+      width: 12px; }
+  .ShowcaseContainer .showcaseButton {
+    border: solid 0.5px rgba(0, 0, 0, .04);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    height: 40px;
+    visibility: hidden;
+    width: 40px; }
+
+.ShowcaseCarousel {
+  height: 377px;
+  overflow: hidden;
+  transform: translateZ(0);
+  width: 768px; }
+  .ShowcaseCarousel .fadeLeftOut {
+    animation: slidefadeOut 350ms cubic-bezier(0.31, 0, 0.31, 1) forwards;
+    pointer-events: none; }
+  .ShowcaseCarousel .fadeRightOut {
+    animation: slidefadeOutReverse 350ms cubic-bezier(0.31, 0, 0.31, 1) forwards;
+    pointer-events: none; }
+  .ShowcaseCarousel .mainSectionSlideFromLeft {
+    animation: slidefadeInReverse 350ms cubic-bezier(0.31, 0, 0.31, 1) forwards; }
+  .ShowcaseCarousel .mainSectionSlideFromRight {
+    animation: slidefadeIn 350ms cubic-bezier(0.31, 0, 0.31, 1) forwards; }
+  .ShowcaseCarousel .sectionHidden {
+    opacity: 0;
+    pointer-events: none;
+    right: 800px; }
+  @keyframes slidefadeOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0); }
+  100% {
+    opacity: 0;
+    transform: translateX(-64px); } }
+  @keyframes slidefadeOutReverse {
+  0% {
+    opacity: 1;
+    transform: translateX(0); }
+  100% {
+    opacity: 0;
+    transform: translateX(64px); } }
+  @keyframes slidefadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(64px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  @keyframes slidefadeInReverse {
+  0% {
+    opacity: 0;
+    transform: translateX(-64px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.ShowcaseContent {
+  height: 377px;
+  width: 768px; }
+  .ShowcaseContent .articleImage {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    min-height: 100%;
+    width: 100%; }
+  .ShowcaseContent .dismissButton {
+    border: none;
+    padding: 6px;
+    position: absolute;
+    right: 8px;
+    top: 8px; }
+  .ShowcaseContent .dismissButton em {
+      background: url(https://s.pinimg.com/webapp/style/images/webapp-common-main-1x-c20ceaff.png) -261px -242px no-repeat;
+      height: 12px;
+      width: 12px; }
+  .ShowcaseContent .emptySection {
+    border-radius: 8px;
+    height: 377px; }
+  .ShowcaseContent .imageWash {
+    background: rgba(0, 0, 0, .05);
+    height: 100%;
+    width: 100%;
+    z-index: 1; }
+
+.ShopShowcaseSection .imageWash {
+  background: rgba(0, 0, 0, .05);
+  height: 100%;
+  width: 100%;
+  z-index: 1; }
+
+.ShopShowcaseSection .shopHoverImage {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 187px;
+  position: absolute;
+  transition: .3s;
+  width: 226px; }
+
+.ShopShowcaseSection .shopHoverImage.leftCollage {
+    left: -226px; }
+
+.ShopShowcaseSection .shopHoverImage.leftCollage.hover {
+      left: 0; }
+
+.ShopShowcaseSection .shopHoverImage.righCollage {
+    right: -226px; }
+
+.ShopShowcaseSection .shopHoverImage.righCollage.hover {
+      right: 0; }
+
+.ShopShowcaseSection .shopCircle {
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  position: absolute;
+  top: 50%; }
+
+.ShopShowcaseSection .shopCircleText {
+  font-size: 18px;
+  font-weight: normal;
+  height: 80px;
+  opacity: .95;
+  width: 80px; }
+
+.ShopShowcaseSection .shopCardImage {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  transition: .3s; }
+
+.ShowcaseInfo .helpCenterLink {
+  padding-left: 2px; }
+
+.ShowcaseInfo .subtitleWrapper {
+  padding-top: 3px; }
+
+.ShowcaseInfo .subtitleWrapper .value {
+    font-weight: bold; }
+
+.ShowcaseInfo.sectionInfoSlideFromLeft .titleWrapper {
+  animation: slidefadeInLeft 0.35s cubic-bezier(0.31, 0, 0.31, 1) forwards; }
+
+.ShowcaseInfo.sectionInfoSlideFromRight .titleWrapper {
+  animation: slidefadeInRight 0.35s cubic-bezier(0.31, 0, 0.31, 1) forwards; }
+
+@keyframes slidefadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-8px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes slidefadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(8px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.ShowcasePips .animatingPipWrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; }
+
+.ShowcasePips .pip {
+  background-color: #efefef;
+  border-radius: 8px;
+  height: 4px;
+  margin-right: 4px;
+  width: 24px; }
+
+.ShowcasePips .pip.animatingPip {
+  animation-duration: 4000ms;
+  animation-fill-mode: forwards;
+  animation-name: animateWidth;
+  animation-timing-function: linear;
+  background-color: #8e8e8e;
+  position: absolute;
+  right: 24px;
+  top: 0; }
+
+.ShowcasePips .pip.filledPip {
+  background-color: #8e8e8e; }
+
+@keyframes animateWidth {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(24px); } }
+
+.CheckListIcon {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 16px; }
+
+.CheckListIcon__completed {
+  animation-duration: .6s;
+  animation-name: ChecklistPulseAnimation;
+  background-color: #4a90e2;
+  border-radius: 50%;
+  padding: 16px; }
+
+@keyframes ChecklistPulseAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); }
+  50% {
+    opacity: 1;
+    transform: scale(1.2); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+

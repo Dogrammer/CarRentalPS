@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 mb-3">
+          <button class="btn btn-primary" (click)="onAdd()">Dodaj Najam</button>
+        </div>
+    </div>
+        <h2>Najmovi</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2">Datum Preuzimanja</th>
+              <th colspan="2">Datum Vraćanja</th>
+              <th>Napomene</th>
+              <th>Lokacija Preuzimanja</th>
+              <th>Lokacija Vraćanja</th>
+              <th>Ime Korisnika</th>
+              <th>Datum Rođenja Korisnika</th>
+              <th>Marka Vozila</th>
+              <th>Model Vozila</th>
+              <th>Tip Vozila</th>
+              <th>Rezervirano</th>
+              <th colspan="2">Akcija</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let rental of rentals">
+              <td>{{rental.startDate | date: 'dd.MM.yyyy'}}</td>
+              <td>{{rental.startDate | date: 'h:mm a'}}</td>
+              <td>{{rental.endDate | date: 'dd.MM.yyyy'}}</td>
+              <td>{{rental.endDate | date: 'h:m a'}}</td>
+              <td>{{rental.remarks}}</td>
+              <td>{{rental.pickUpLocation ? rental.pickUpLocation.name : ''}}</td>
+              <td>{{rental.dropOffLocation ? rental.dropOffLocation.name : ''}}</td>
+              <td>{{rental.customer ? rental.customer.firstName : ''}} {{rental.customer ? rental.customer.lastName : ''}}</td>
+              <td>{{rental.customer ? rental.customer.dateOfBirth : ''}}</td>
+              <td>{{rental.car ? rental.car.brand : ''}}</td>
+              <td>{{rental.car ? rental.car.model : ''}}</td>
+              <td>{{rental.car.carCategory ? rental.car.carCategory.name : ''}}</td>
+              <td>{{rental.reserved}}</td>
+              <td>
+                  <button class="btn" (click)="onEdit(rental.id)"><i class="fa fa-edit" style="font-size:30px;color:gray;"></i></button>
+              </td>
+              <td>
+                  <button class="btn" (click)="onDelete(rental.id)"><i class="fa fa-trash" style="font-size:30px;color:red;"></i></button>
+              </td>
+              
+            </tr>
+          </tbody>
+        </table>
+</div>
+
+     
+
+      

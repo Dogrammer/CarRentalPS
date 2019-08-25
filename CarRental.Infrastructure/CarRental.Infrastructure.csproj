@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup>
+  <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles> 
+</PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarRental.Model\CarRental.Model.csproj" />
+    <ProjectReference Include="..\CarRental.Shared\CarRental.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

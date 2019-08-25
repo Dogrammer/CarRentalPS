@@ -1,0 +1,14 @@
+<div>
+   <div [hidden]="errorMessage.length == 0">{{errorMessage}}</div>
+   <form (submit)="onSubmit()" #categoryForm="ngForm">
+      <input title="id" name="id" type="hidden" [(ngModel)]="category.id" />
+       
+       <div class="form-group">
+         <label for="category">Tip Vozila</label>
+         <input required type="text" name="category" [(ngModel)]="category.name" class="form-control" id="category">
+       </div>
+
+       <button [disabled]="!categoryForm.form.valid" type="submit" class="btn btn-primary">Submit</button>
+       <button type="button" class="btn btn-secondary ml-5" (click)="cancelForm()">Odustani</button>
+     </form>
+</div> 

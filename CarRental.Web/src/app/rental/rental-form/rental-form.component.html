@@ -1,0 +1,109 @@
+<div>
+    <div class="pb-5">
+      <h2>Najam</h2>
+      <strong>dodavanje/uredivanje najma</strong>
+    </div>
+    <div [hidden]="errorMessage.length == 0">{{errorMessage}}</div>
+    <div class="form-wrapper pb-5">
+        <form (submit)="onSubmit()" #rentalForm="ngForm">
+            <input  title="id" name="id" type="hidden" [(ngModel)]="rental.id" />
+            
+            <div class="form-group">
+                <label for="startdate">Datum Preuzimanja</label>
+                <input required 
+                        type="datetime" 
+                        name="startdate" 
+                        [(ngModel)]="rental.startDate"
+                        class="form-control"
+                        id="startdate"
+                        readonly="readonly"
+                        placeholder="Klikni za odabir datuma"
+                        bsDatepicker [bsConfig]="bsConfig">
+            </div>
+            
+            
+            <div class="form-group">
+                <label for="enddate">Datum Vraćanja</label>
+                <input required 
+                        type="datetime"
+                        name="enddate" 
+                        [(ngModel)]="rental.endDate" 
+                        class="form-control" 
+                        id="enddate"
+                        readonly="readonly"
+                        placeholder="Klikni za odabir datuma"
+                        bsDatepicker [bsConfig]="bsConfig">
+            </div>
+    
+            <div class="form-group">
+                <label for="carId">Vozilo</label>
+                <select class="form-control" name="carId" [(ngModel)]="selectedCarId">
+                    <option selected="selected">Select Your Vehicle</option>
+                  <option *ngFor="let car of cars" [value]="car.id">
+                    {{car.brand}} {{car.model}}
+                  </option>
+                </select>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="pickuplocationId">Lokacija Preuzimanja</label>
+                      <select class="form-control" name="pickuplocationId" [(ngModel)]="selectedPickUpLocationId">
+                        <option *ngFor="let pl of locations" [value]="pl.id">
+                          {{pl.name}}, {{pl.city.name}}
+                        </option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-group">
+                      <label for="dropofflocationId">Lokacija Vračanja</label>
+                      <select class="form-control" name="dropOffLocationId" [(ngModel)]="selectedDropOffLocationId">
+                        <option *ngFor="let dl of locations" [value]="dl.id">
+                          {{dl.name}}, {{dl.city.name}}
+                        </option>
+                      </select>
+                  </div>
+              </div>
+            </div>
+    
+            
+    
+            
+    
+            <div class="form-group">
+                <label for="customerId">Korisnik</label>
+                <select class="form-control" name="customerId" [(ngModel)]="selectedCustomerId">
+                  <option *ngFor="let customer of customers" [value]="customer.id">
+                    {{customer.firstName}} {{customer.lastName}}
+                  </option>
+                </select>
+            </div>
+    
+            <!-- <div class="form-group">
+                <label for="remarks">Napomene</label>
+                <input required 
+                    type="text" 
+                    name="remarks" 
+                     
+                    class="" 
+                    id="remarks"
+                    rows="5">
+            </div> -->
+    
+            <div class="form-group">
+            <textarea
+              placeholder="Napomena ..."
+              class="form-control"
+              [(ngModel)]="rental.remarks"
+              name="remarks" id="remarks"
+              cols="30" rows="10">
+            </textarea>
+          </div>
+            <button [disabled]="!rentalForm.form.valid" type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary ml-5" (click)="cancelForm()">Odustani</button>
+        </form>
+    </div>
+  
+  </div>
