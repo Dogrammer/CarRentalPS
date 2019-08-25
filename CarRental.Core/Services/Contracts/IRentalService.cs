@@ -7,6 +7,7 @@ namespace CarRental.Core.Services
     {
          bool CarAvailable(Rental rental);
          bool DateValid(DateTime? startDate, DateTime? endDate);
+         
 
     }
 }

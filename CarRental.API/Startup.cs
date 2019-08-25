@@ -10,6 +10,12 @@ using CarRental.Infrastructure.DB;
 using CarRental.Core.Repositories;
 using CarRental.Core.Services;
 using CarRental.Core.Helpers;
+using Microsoft.AspNetCore.Identity;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using CarRental.Model.Models;
 
 namespace CarRental.API
 {
@@ -31,11 +37,37 @@ namespace CarRental.API
                 mc.AddProfile(new AutoMapperProfiles());
             });
 
-             services.AddDbContext<RentalContext>(options =>
+             services.AddDbContext<CarRentalContext>(options =>
                 options
                     .UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
                     opt => opt.MigrationsAssembly("CarRental.Infrastructure"))
                );
+               
+            //    services.AddScoped<IAuthService, AuthService>();
+            //    services.AddScoped<IUserService, UserService>();
+
+               services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<CarRentalContext>()
+                .AddDefaultTokenProviders();
+
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+                services.AddAuthentication(options => 
+                {
+                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(cfg => 
+                {
+                    cfg.RequireHttpsMetadata = false;
+                    cfg.SaveToken = true;
+                    cfg.TokenValidationParameters = new TokenValidationParameters {
+                        ValidIssuer = Configuration["JwtIssuer"],
+                        ValidAudience = Configuration["JwtIssuer"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JwtKey"])),
+                        ClockSkew = TimeSpan.Zero
+                    };
+                });
         
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IRentalService, RentalService>();
@@ -54,9 +86,12 @@ namespace CarRental.API
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseAuthentication();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseMvc(routes => {
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }

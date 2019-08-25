@@ -4,15 +4,17 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CarRental.Model.Models;
 using CarRental.Model.Interfaces;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System;
 using CarRental.Infrastructure.Extensions.ModelBuilderStuff;
+using Microsoft.AspNetCore.Identity;
 
 namespace CarRental.Infrastructure.DB
 {
-    public class RentalContext : DbContext
+    public class CarRentalContext : IdentityDbContext<User>
     {
         
-        public RentalContext(DbContextOptions<RentalContext> options)
+        public CarRentalContext(DbContextOptions<CarRentalContext> options)
             : base(options)
         {
 
@@ -23,7 +25,7 @@ namespace CarRental.Infrastructure.DB
         public DbSet<Location> Locations { get; set; }
         public DbSet<CarCategory> CarCategories { get; set; }
         public DbSet<Rental> Rentals { get; set; }
-        public DbSet<Customer> Customers { get; set; }
+        public DbSet<User> Customers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -49,7 +51,7 @@ namespace CarRental.Infrastructure.DB
                 .HasIndex(c => c.Zip)
                 .IsUnique();
 
-            modelBuilder.Entity<Customer>()
+            modelBuilder.Entity<User>()
                 .HasIndex(c => c.DrivingLicenceNumber)
                 .IsUnique();
             
@@ -60,8 +62,8 @@ namespace CarRental.Infrastructure.DB
             modelBuilder.Entity<CarCategory>().Property<bool>("IsDeleted");
             modelBuilder.Entity<CarCategory>().HasQueryFilter(r => EF.Property<bool>(r, "IsDeleted") == false);
             
-            modelBuilder.Entity<Customer>().Property<bool>("IsDeleted");
-            modelBuilder.Entity<Customer>().HasQueryFilter(r => EF.Property<bool>(r, "IsDeleted") == false);
+            modelBuilder.Entity<User>().Property<bool>("IsDeleted");
+            modelBuilder.Entity<User>().HasQueryFilter(r => EF.Property<bool>(r, "IsDeleted") == false);
 
             modelBuilder.Entity<Location>().Property<bool>("IsDeleted");
             modelBuilder.Entity<Location>().HasQueryFilter(r => EF.Property<bool>(r, "IsDeleted") == false);

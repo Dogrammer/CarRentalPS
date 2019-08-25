@@ -38,7 +38,7 @@ namespace CarRental.Model.Models
         public int DropOffLocationId { get; set; }
 
         //[JsonIgnore]        
-        public Customer Customer { get; set; }
+        public User User { get; set; }
         
         
         [Required(ErrorMessage="Polje 'Kupac' je obvezno polje."),

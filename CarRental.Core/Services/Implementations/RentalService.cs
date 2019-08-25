@@ -12,8 +12,8 @@ namespace CarRental.Core.Services
     public class RentalService : IRentalService
     {
         private readonly IRepository<Rental> _repository;
-        private readonly RentalContext _context;
-        public RentalService(IRepository<Rental> repository, RentalContext context)
+        private readonly CarRentalContext _context;
+        public RentalService(IRepository<Rental> repository, CarRentalContext context)
         {
             _context = context;
             _repository = repository;

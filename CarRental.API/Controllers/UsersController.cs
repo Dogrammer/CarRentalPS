@@ -11,52 +11,52 @@ namespace CarRentalApp.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CustomersController : AppController
+    public class UsersController : AppController
     {
-        private readonly IRepository<Customer> _repo;
+        private readonly IRepository<User> _repo;
 
-        public CustomersController(IRepository<Customer> repo)
+        public UsersController(IRepository<User> repo)
         {
             _repo = repo;
 
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            var customers = await _repo.Get();
+            var users = await _repo.Get();
             
-            return Ok(customers);
+            return Ok(users);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetCustomer(int id)
+        public async Task<IActionResult> GetUser(int id)
         {
             return ApiOk(await _repo.GetById(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostCustomer([FromBody]Customer customer)
+        public async Task<IActionResult> PostUser([FromBody]User user)
         {
-            return ApiOk(await _repo.Add(customer));
+            return ApiOk(await _repo.Add(user));
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCustomer(int id, [FromBody]Customer customer)
-        {
-            if (id != customer.Id)
-                return BadRequest();
+        // [HttpPut("{id}")]
+        // public async Task<IActionResult> PutUser(int id, [FromBody]User user)
+        // {
+        //     if (id != user.Id)
+        //         return BadRequest();
 
-            // _repo.Update(carCategory);
-            return ApiOk(await _repo.Update(customer));
-        }
+        //     // _repo.Update(carCategory);
+        //     return ApiOk(await _repo.Update(user));
+        // }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCustomer(int id)
+        public async Task<IActionResult> DeleteUser(int id)
         {
-            var customer = await _repo.GetById(id);
+            var user = await _repo.GetById(id);
 
-            return ApiOk(await _repo.Remove(customer));
+            return ApiOk(await _repo.Remove(user));
         }
 
         // [HttpGet("{id}")]

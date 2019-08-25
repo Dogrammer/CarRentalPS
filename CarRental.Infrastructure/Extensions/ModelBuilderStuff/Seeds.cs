@@ -11,7 +11,7 @@ namespace CarRental.Infrastructure.Extensions.ModelBuilderStuff
             Cars(modelBuilder);
             CarCategories(modelBuilder);
             Cities(modelBuilder);
-            Customers(modelBuilder);
+            Users(modelBuilder);
             Locations(modelBuilder);
             Rentals(modelBuilder);
         }
@@ -105,21 +105,21 @@ namespace CarRental.Infrastructure.Extensions.ModelBuilderStuff
 
         }
 
-        private static void Customers(ModelBuilder modelBuilder)
+        private static void Users(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Customer>().HasData(
-                new Customer
+            modelBuilder.Entity<User>().HasData(
+                new User
                 {
-                    Id = 1,
+                    // Id = 1,
                     FirstName = "Ivan",
                     LastName = "Ivanovic",
                     DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0),
                     DrivingLicenceNumber = "11111111"
                 },
 
-                new Customer
+                new User
                 {
-                    Id = 2,
+                    // Id = 2,
                     FirstName = "Marko",
                     LastName = "Marković",
                     DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0),
@@ -127,63 +127,63 @@ namespace CarRental.Infrastructure.Extensions.ModelBuilderStuff
                 },
 
 
-                new Customer
+                new User
                 {
-                    Id = 3,
+                    // Id = 3,
                     FirstName = "Josip",
                     LastName = "Josipović",
                     DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0),
                     DrivingLicenceNumber = "33333333"
                 },
 
-                new Customer
+                new User
                 {
-                    Id = 4,
+                    // Id = 4,
                     FirstName = "Pero",
                     LastName = "Perić",
                     DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0),
                     DrivingLicenceNumber = "44444444"
                 },
 
-                new Customer
+                new User
                 {
-                    Id = 5,
+                    // Id = 5,
                     FirstName = "Matko",
                     LastName = "Matković",
                     DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0),
                     DrivingLicenceNumber = "55555555"
                 },
 
-                new Customer
+                new User
                 {
-                    Id = 6,
+                    // Id = 6,
                     FirstName = "Ivica",
                     LastName = "Ivić",
                     DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0),
                     DrivingLicenceNumber = "88888888"
                 },
 
-                new Customer
+                new User
                 {
-                    Id = 7,
+                    // Id = 7,
                     FirstName = "Davor",
                     LastName = "Davorić",
                     DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0),
                     DrivingLicenceNumber = "99999999"
                 },
 
-                new Customer
+                new User
                 {
-                    Id = 8,
+                    // Id = 8,
                     FirstName = "Dario",
                     LastName = "Dariović",
                     DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0),
                     DrivingLicenceNumber = "12121212"
                 },
 
-                new Customer
+                new User
                 {
-                    Id = 9,
+                    // Id = 9,
                     FirstName = "Dorian",
                     LastName = "Dorianović",
                     DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0),

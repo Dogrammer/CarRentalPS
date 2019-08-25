@@ -4,14 +4,16 @@ using CarRental.Infrastructure.DB;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CarRental.Infrastructure.Migrations
 {
-    [DbContext(typeof(RentalContext))]
-    partial class RentalContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(CarRentalContext))]
+    [Migration("20190825204458_IdentitySranje")]
+    partial class IdentitySranje
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,7 +62,7 @@ namespace CarRental.Infrastructure.Migrations
                             Brand = "Audi",
                             CarCategoryId = 4,
                             Color = "Black",
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 138, DateTimeKind.Utc).AddTicks(6669),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 934, DateTimeKind.Utc).AddTicks(5871),
                             IsDeleted = false,
                             Mileage = 10500,
                             Model = "A4",
@@ -72,7 +74,7 @@ namespace CarRental.Infrastructure.Migrations
                             Brand = "BMW",
                             CarCategoryId = 3,
                             Color = "Red",
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 138, DateTimeKind.Utc).AddTicks(8404),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 934, DateTimeKind.Utc).AddTicks(7458),
                             IsDeleted = false,
                             Mileage = 100500,
                             Model = "320d",
@@ -84,7 +86,7 @@ namespace CarRental.Infrastructure.Migrations
                             Brand = "Mazda",
                             CarCategoryId = 3,
                             Color = "Black",
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 138, DateTimeKind.Utc).AddTicks(8426),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 934, DateTimeKind.Utc).AddTicks(7481),
                             IsDeleted = false,
                             Mileage = 12500,
                             Model = "3",
@@ -96,7 +98,7 @@ namespace CarRental.Infrastructure.Migrations
                             Brand = "Audi",
                             CarCategoryId = 4,
                             Color = "Blue",
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 138, DateTimeKind.Utc).AddTicks(8426),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 934, DateTimeKind.Utc).AddTicks(7481),
                             IsDeleted = false,
                             Mileage = 25500,
                             Model = "A7",
@@ -108,7 +110,7 @@ namespace CarRental.Infrastructure.Migrations
                             Brand = "Mercedes",
                             CarCategoryId = 3,
                             Color = "Black",
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 138, DateTimeKind.Utc).AddTicks(8426),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 934, DateTimeKind.Utc).AddTicks(7481),
                             IsDeleted = false,
                             Mileage = 150000,
                             Model = "c200",
@@ -120,7 +122,7 @@ namespace CarRental.Infrastructure.Migrations
                             Brand = "Citroen",
                             CarCategoryId = 4,
                             Color = "Yellow",
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 138, DateTimeKind.Utc).AddTicks(8426),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 934, DateTimeKind.Utc).AddTicks(7481),
                             IsDeleted = false,
                             Mileage = 107500,
                             Model = "c3",
@@ -132,7 +134,7 @@ namespace CarRental.Infrastructure.Migrations
                             Brand = "Peugeot",
                             CarCategoryId = 3,
                             Color = "Red",
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 138, DateTimeKind.Utc).AddTicks(8432),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 934, DateTimeKind.Utc).AddTicks(7481),
                             IsDeleted = false,
                             Mileage = 100500,
                             Model = "307",
@@ -167,35 +169,35 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(3359),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(2272),
                             IsDeleted = false,
                             Name = "van"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(3706),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(2602),
                             IsDeleted = false,
                             Name = "mini-van"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(3712),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(2607),
                             IsDeleted = false,
                             Name = "limousine"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(3712),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(2607),
                             IsDeleted = false,
                             Name = "hatchback"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(3712),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(2607),
                             IsDeleted = false,
                             Name = "coupe"
                         });
@@ -235,7 +237,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9367),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8353),
                             IsDeleted = false,
                             Name = "Sisak",
                             Zip = "44000"
@@ -243,7 +245,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9964),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8916),
                             IsDeleted = false,
                             Name = "Zagreb",
                             Zip = "10000"
@@ -251,7 +253,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9970),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8922),
                             IsDeleted = false,
                             Name = "Velika Gorica",
                             Zip = "10410"
@@ -259,7 +261,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9970),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8922),
                             IsDeleted = false,
                             Name = "Osijek",
                             Zip = "31000"
@@ -267,7 +269,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9970),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8922),
                             IsDeleted = false,
                             Name = "Slavonski Brod",
                             Zip = "35000"
@@ -275,7 +277,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9970),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8928),
                             IsDeleted = false,
                             Name = "Rijeka",
                             Zip = "51000"
@@ -283,7 +285,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9970),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8928),
                             IsDeleted = false,
                             Name = "Varaždin",
                             Zip = "42000"
@@ -291,7 +293,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9976),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8928),
                             IsDeleted = false,
                             Name = "Krapina",
                             Zip = "49000"
@@ -299,7 +301,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9976),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8928),
                             IsDeleted = false,
                             Name = "Split",
                             Zip = "21000"
@@ -307,7 +309,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9976),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8928),
                             IsDeleted = false,
                             Name = "Dubrovnik",
                             Zip = "20000"
@@ -315,7 +317,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9976),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8928),
                             IsDeleted = false,
                             Name = "Trogir",
                             Zip = "21220"
@@ -323,7 +325,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9976),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8928),
                             IsDeleted = false,
                             Name = "Šibenik",
                             Zip = "22000"
@@ -331,7 +333,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9976),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8928),
                             IsDeleted = false,
                             Name = "Vukovar",
                             Zip = "32000"
@@ -339,137 +341,10 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 140, DateTimeKind.Utc).AddTicks(9976),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 936, DateTimeKind.Utc).AddTicks(8973),
                             IsDeleted = false,
                             Name = "Vinkovci",
                             Zip = "37000"
-                        });
-                });
-
-            modelBuilder.Entity("CarRental.Model.Models.Customer", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedAt");
-
-                    b.Property<DateTime?>("DateOfBirth")
-                        .IsRequired();
-
-                    b.Property<string>("DrivingLicenceNumber")
-                        .IsRequired()
-                        .HasMaxLength(8);
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(100);
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(100);
-
-                    b.Property<DateTime?>("ModifiedAt");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DrivingLicenceNumber")
-                        .IsUnique();
-
-                    b.ToTable("Customers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 141, DateTimeKind.Utc).AddTicks(7951),
-                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DrivingLicenceNumber = "11111111",
-                            FirstName = "Ivan",
-                            IsDeleted = false,
-                            LastName = "Ivanovic"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 141, DateTimeKind.Utc).AddTicks(9322),
-                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DrivingLicenceNumber = "22222222",
-                            FirstName = "Marko",
-                            IsDeleted = false,
-                            LastName = "Marković"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 141, DateTimeKind.Utc).AddTicks(9339),
-                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DrivingLicenceNumber = "33333333",
-                            FirstName = "Josip",
-                            IsDeleted = false,
-                            LastName = "Josipović"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 141, DateTimeKind.Utc).AddTicks(9339),
-                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DrivingLicenceNumber = "44444444",
-                            FirstName = "Pero",
-                            IsDeleted = false,
-                            LastName = "Perić"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 141, DateTimeKind.Utc).AddTicks(9339),
-                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DrivingLicenceNumber = "55555555",
-                            FirstName = "Matko",
-                            IsDeleted = false,
-                            LastName = "Matković"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 141, DateTimeKind.Utc).AddTicks(9339),
-                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DrivingLicenceNumber = "88888888",
-                            FirstName = "Ivica",
-                            IsDeleted = false,
-                            LastName = "Ivić"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 141, DateTimeKind.Utc).AddTicks(9339),
-                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DrivingLicenceNumber = "99999999",
-                            FirstName = "Davor",
-                            IsDeleted = false,
-                            LastName = "Davorić"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 141, DateTimeKind.Utc).AddTicks(9345),
-                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DrivingLicenceNumber = "12121212",
-                            FirstName = "Dario",
-                            IsDeleted = false,
-                            LastName = "Dariović"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 141, DateTimeKind.Utc).AddTicks(9345),
-                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DrivingLicenceNumber = "12312312",
-                            FirstName = "Dorian",
-                            IsDeleted = false,
-                            LastName = "Dorianović"
                         });
                 });
 
@@ -502,7 +377,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 1,
                             CityId = 1,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 142, DateTimeKind.Utc).AddTicks(2793),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 938, DateTimeKind.Utc).AddTicks(3867),
                             IsDeleted = false,
                             Name = "Vukovarska 4c"
                         },
@@ -510,7 +385,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 2,
                             CityId = 2,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 142, DateTimeKind.Utc).AddTicks(3373),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 938, DateTimeKind.Utc).AddTicks(4436),
                             IsDeleted = false,
                             Name = "Zagrebačka 5"
                         },
@@ -518,7 +393,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 3,
                             CityId = 4,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 142, DateTimeKind.Utc).AddTicks(3384),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 938, DateTimeKind.Utc).AddTicks(4441),
                             IsDeleted = false,
                             Name = "Petrova 5"
                         },
@@ -526,7 +401,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 4,
                             CityId = 3,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 142, DateTimeKind.Utc).AddTicks(3384),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 938, DateTimeKind.Utc).AddTicks(4441),
                             IsDeleted = false,
                             Name = "Sisačka 13"
                         },
@@ -534,7 +409,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 5,
                             CityId = 7,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 142, DateTimeKind.Utc).AddTicks(3384),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 938, DateTimeKind.Utc).AddTicks(4441),
                             IsDeleted = false,
                             Name = "Slavonska 4c"
                         },
@@ -542,7 +417,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 6,
                             CityId = 8,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 142, DateTimeKind.Utc).AddTicks(3384),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 938, DateTimeKind.Utc).AddTicks(4447),
                             IsDeleted = false,
                             Name = "Petrinjska 4c"
                         },
@@ -550,7 +425,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 7,
                             CityId = 1,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 142, DateTimeKind.Utc).AddTicks(3384),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 938, DateTimeKind.Utc).AddTicks(4447),
                             IsDeleted = false,
                             Name = "Vukovarska 15c"
                         });
@@ -586,15 +461,17 @@ namespace CarRental.Infrastructure.Migrations
                     b.Property<DateTime?>("StartDate")
                         .IsRequired();
 
+                    b.Property<string>("UserId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CarId");
 
-                    b.HasIndex("CustomerId");
-
                     b.HasIndex("DropOffLocationId");
 
                     b.HasIndex("PickUpLocationId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Rentals");
 
@@ -603,7 +480,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 1,
                             CarId = 3,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 143, DateTimeKind.Utc).AddTicks(2646),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 939, DateTimeKind.Utc).AddTicks(3953),
                             CustomerId = 3,
                             DropOffLocationId = 3,
                             EndDate = new DateTime(2015, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -617,7 +494,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 2,
                             CarId = 3,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 143, DateTimeKind.Utc).AddTicks(4756),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 939, DateTimeKind.Utc).AddTicks(5996),
                             CustomerId = 5,
                             DropOffLocationId = 4,
                             EndDate = new DateTime(2016, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -631,7 +508,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 3,
                             CarId = 1,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 143, DateTimeKind.Utc).AddTicks(4779),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 939, DateTimeKind.Utc).AddTicks(6024),
                             CustomerId = 6,
                             DropOffLocationId = 3,
                             EndDate = new DateTime(2018, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -645,7 +522,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 4,
                             CarId = 2,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 143, DateTimeKind.Utc).AddTicks(4785),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 939, DateTimeKind.Utc).AddTicks(6024),
                             CustomerId = 2,
                             DropOffLocationId = 2,
                             EndDate = new DateTime(2019, 5, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -659,7 +536,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 5,
                             CarId = 6,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 143, DateTimeKind.Utc).AddTicks(4785),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 939, DateTimeKind.Utc).AddTicks(6024),
                             CustomerId = 2,
                             DropOffLocationId = 2,
                             EndDate = new DateTime(2019, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -673,7 +550,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 6,
                             CarId = 5,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 143, DateTimeKind.Utc).AddTicks(4785),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 939, DateTimeKind.Utc).AddTicks(6064),
                             CustomerId = 2,
                             DropOffLocationId = 2,
                             EndDate = new DateTime(2019, 10, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -687,7 +564,7 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 7,
                             CarId = 4,
-                            CreatedAt = new DateTime(2019, 8, 24, 7, 27, 32, 143, DateTimeKind.Utc).AddTicks(4785),
+                            CreatedAt = new DateTime(2019, 8, 25, 20, 44, 57, 939, DateTimeKind.Utc).AddTicks(6070),
                             CustomerId = 2,
                             DropOffLocationId = 2,
                             EndDate = new DateTime(2019, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -697,6 +574,324 @@ namespace CarRental.Infrastructure.Migrations
                             Reserved = true,
                             StartDate = new DateTime(2019, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
+                });
+
+            modelBuilder.Entity("CarRental.Model.Models.User", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("AccessFailedCount");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<DateTime?>("DateOfBirth")
+                        .IsRequired();
+
+                    b.Property<string>("DrivingLicenceNumber")
+                        .IsRequired()
+                        .HasMaxLength(8);
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256);
+
+                    b.Property<bool>("EmailConfirmed");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(100);
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(100);
+
+                    b.Property<bool>("LockoutEnabled");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("PasswordHash");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("SecurityStamp");
+
+                    b.Property<bool>("TwoFactorEnabled");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DrivingLicenceNumber")
+                        .IsUnique();
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "5740c080-abd1-480b-9c93-e56a4723e47d",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "92f10f7c-93d3-42c2-b5bb-034b91ba6d46",
+                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DrivingLicenceNumber = "11111111",
+                            EmailConfirmed = false,
+                            FirstName = "Ivan",
+                            IsDeleted = false,
+                            LastName = "Ivanovic",
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false
+                        },
+                        new
+                        {
+                            Id = "b7886cb7-c3ef-4eda-8a05-afaaf4923f1e",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "11cf7363-c522-4602-84b7-5bf14907d26a",
+                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DrivingLicenceNumber = "22222222",
+                            EmailConfirmed = false,
+                            FirstName = "Marko",
+                            IsDeleted = false,
+                            LastName = "Marković",
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false
+                        },
+                        new
+                        {
+                            Id = "4f41703b-3e3e-4b5f-b831-e5c590dab7f3",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "bf828c55-a359-40d3-9cda-b5fcb6e2e42c",
+                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DrivingLicenceNumber = "33333333",
+                            EmailConfirmed = false,
+                            FirstName = "Josip",
+                            IsDeleted = false,
+                            LastName = "Josipović",
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false
+                        },
+                        new
+                        {
+                            Id = "7e706949-242b-4011-957f-03c49cd7043e",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "f403bc4d-0021-408a-9d85-61b0b76bc59b",
+                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DrivingLicenceNumber = "44444444",
+                            EmailConfirmed = false,
+                            FirstName = "Pero",
+                            IsDeleted = false,
+                            LastName = "Perić",
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false
+                        },
+                        new
+                        {
+                            Id = "87b85a23-8a94-4a62-b868-7b8038a14899",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "d1d8a0b7-7495-4c02-94a4-d70772876270",
+                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DrivingLicenceNumber = "55555555",
+                            EmailConfirmed = false,
+                            FirstName = "Matko",
+                            IsDeleted = false,
+                            LastName = "Matković",
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false
+                        },
+                        new
+                        {
+                            Id = "3184cea3-079f-4c7a-95b7-b5125dc84c0e",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "c58f376d-643e-4647-88d5-0df91f1e87c4",
+                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DrivingLicenceNumber = "88888888",
+                            EmailConfirmed = false,
+                            FirstName = "Ivica",
+                            IsDeleted = false,
+                            LastName = "Ivić",
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false
+                        },
+                        new
+                        {
+                            Id = "e3971387-4830-42c8-801f-fa4bc3854a89",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "b9ebfb1d-8f10-4336-b919-1dfd8ccc38a9",
+                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DrivingLicenceNumber = "99999999",
+                            EmailConfirmed = false,
+                            FirstName = "Davor",
+                            IsDeleted = false,
+                            LastName = "Davorić",
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false
+                        },
+                        new
+                        {
+                            Id = "b4ae978f-3feb-4dc6-a88b-5f5544aa882e",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "2d5abf96-3765-4a5f-8765-66d41f167bff",
+                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DrivingLicenceNumber = "12121212",
+                            EmailConfirmed = false,
+                            FirstName = "Dario",
+                            IsDeleted = false,
+                            LastName = "Dariović",
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false
+                        },
+                        new
+                        {
+                            Id = "83dfe8c8-afdc-4a75-a658-fd06fca5127e",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "9b9163f7-ce90-4c83-8f9b-0580c3ea4ca1",
+                            DateOfBirth = new DateTime(1990, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DrivingLicenceNumber = "12312312",
+                            EmailConfirmed = false,
+                            FirstName = "Dorian",
+                            IsDeleted = false,
+                            LastName = "Dorianović",
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false
+                        });
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType");
+
+                    b.Property<string>("ClaimValue");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType");
+
+                    b.Property<string>("ClaimValue");
+
+                    b.Property<string>("UserId")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider");
+
+                    b.Property<string>("ProviderKey");
+
+                    b.Property<string>("ProviderDisplayName");
+
+                    b.Property<string>("UserId")
+                        .IsRequired();
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId");
+
+                    b.Property<string>("RoleId");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId");
+
+                    b.Property<string>("LoginProvider");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Value");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens");
                 });
 
             modelBuilder.Entity("CarRental.Model.Models.Car", b =>
@@ -722,11 +917,6 @@ namespace CarRental.Infrastructure.Migrations
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("CarRental.Model.Models.Customer", "Customer")
-                        .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
                     b.HasOne("CarRental.Model.Models.Location", "DropOffLocation")
                         .WithMany()
                         .HasForeignKey("DropOffLocationId")
@@ -736,6 +926,55 @@ namespace CarRental.Infrastructure.Migrations
                         .WithMany()
                         .HasForeignKey("PickUpLocationId")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("CarRental.Model.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("CarRental.Model.Models.User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("CarRental.Model.Models.User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CarRental.Model.Models.User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("CarRental.Model.Models.User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

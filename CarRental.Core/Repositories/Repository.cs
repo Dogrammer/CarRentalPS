@@ -12,8 +12,8 @@ namespace CarRental.Core.Repositories
     public class Repository<T> : IRepository<T> where T : class
     {
 
-        private readonly RentalContext _context;
-        public Repository(RentalContext context)
+        private readonly CarRentalContext _context;
+        public Repository(CarRentalContext context)
         {
             _context = context;
         }
@@ -96,7 +96,7 @@ namespace CarRental.Core.Repositories
             var rentals = _context
                 .Rentals
                 .Include(c => c.Car).ThenInclude(c => c.CarCategory)
-                .Include(c => c.Customer)
+                .Include(u => u.User)
                 .Include(p => p.PickUpLocation)
                 .Include(d => d.DropOffLocation);
                 
@@ -144,7 +144,7 @@ namespace CarRental.Core.Repositories
             var rental = await _context.Rentals
                 .Include(l => l.PickUpLocation)
                 .Include(d => d.DropOffLocation)
-                .Include(c => c.Customer)
+                .Include(u => u.User)
                 .Include(r => r.Car)
                 .FirstOrDefaultAsync(x => x.Id == id);
             
