@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace CarRental.Model.Models
 {
-    public class User : IdentityUser, ISoftDeletable
+    public class User : IdentityUser<int>, ISoftDeletable
     {
         [Required(ErrorMessage="Polje 'ime' je obvezno polje."), StringLength(100, ErrorMessage = "Duljina naziva imena smije biti maksimalno 100 znakova")]
         public string FirstName { get; set; }

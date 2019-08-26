@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace CarRental.Infrastructure.DB
 {
-    public class CarRentalContext : IdentityDbContext<User>
+    public class CarRentalContext : IdentityDbContext<User, IdentityRole<int>, int>
     {
         
         public CarRentalContext(DbContextOptions<CarRentalContext> options)

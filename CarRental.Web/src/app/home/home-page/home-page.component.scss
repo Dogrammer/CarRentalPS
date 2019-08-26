@@ -49,3 +49,38 @@ body {
     text-align: center;
     vertical-align: middle;    
   }
+
+  .button{
+    
+    background: #008ed6;
+    width: 400px;
+    display:block;
+    border-radius: 20px;
+    padding: .5em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+}
+.button:hover{
+    background: rgba(0,0,0,0);
+    color: white;
+    box-shadow: inset 0 0 0 3px white;
+    text-decoration: none;
+}
+.button a{
+      color:white;
+      font-size: 18pt;
+      font-weight: 350;
+  }
+.button a:hover{
+      color: white;
+  }
+
+  #signUpButton {
+    float: right;
+    width: 320px;
+    height: 70px;
+    margin-top: 200px;
+  }
+ 
