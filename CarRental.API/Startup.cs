@@ -16,6 +16,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using CarRental.Model.Models;
+using CarRental.Core.Services.Contracts;
+using CarRental.Core.Services.Implementations;
 
 namespace CarRental.API
 {
@@ -43,8 +45,8 @@ namespace CarRental.API
                     opt => opt.MigrationsAssembly("CarRental.Infrastructure"))
                );
                
-            //    services.AddScoped<IAuthService, AuthService>();
-            //    services.AddScoped<IUserService, UserService>();
+               services.AddScoped<IAuthService, AuthService>();
+               services.AddScoped<IUserService, UserService>();
 
                services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<CarRentalContext>()

@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CarRental.API.Controllers.Auth
 {
+
+    [ApiController]
+    [Route("api/[controller]")]
+    
     public class AuthController : AppController
     {
         private readonly IAuthService AuthService;
@@ -22,7 +26,7 @@ namespace CarRental.API.Controllers.Auth
             UserService = userService;
         }
         
-        [HttpPost]
+        [HttpPost("login")]
         public async Task<object> Login([FromBody] LoginRequest request)
         {
             string token = await AuthService.SignInAsync(request.Email, request.Password);
@@ -33,10 +37,10 @@ namespace CarRental.API.Controllers.Auth
             return token;
         }
        
-        [HttpPost]
+        [HttpPost("register")]
         public async Task<RegisterResponse> Register([FromBody] RegisterRequest request)
         {
-            string token = await AuthService.RegisterAsync(request.Email, request.Password);
+            string token = await AuthService.RegisterAsync(request.FirstName, request.LastName, request.Email, request.Password, request.DateOfBirth, request.DrivingLicenceNumber);
             var user = await UserService.getByEmailAsync(request.Email);
 
             if(string.IsNullOrEmpty(token))

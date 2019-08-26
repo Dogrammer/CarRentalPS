@@ -12,6 +12,7 @@ using CarRental.Model.Models;
 using CarRental.Core.Services;
 using CarRental.Core.Helpers;
 using CarRental.API.Controllers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CarRentalApp.Controllers
 {
@@ -37,7 +38,7 @@ namespace CarRentalApp.Controllers
 
         }
 
-
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult> GetRentals([FromQuery]RentalParams rentalParams)
         {
